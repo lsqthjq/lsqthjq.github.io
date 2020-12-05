@@ -1,4 +1,4 @@
-# 设计模式分类
+# 设计模式分类 {#title-home}
 
 [TOC]
 
@@ -87,7 +87,7 @@
   - Strategy
   - oberver/event
 - 单一职责
-  - Decotator
+  - Decorator
   - bridge
 - 对象创建
   - Factory method

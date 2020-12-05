@@ -1,4 +1,4 @@
-# 设计模式基本原则
+# 设计模式基本原则 {#title-home}
 
 > 设计模式学习笔记 - 1 [23个设计模式-设计模式简介](https://www.bilibili.com/video/BV1kW411P7KS?p=2)
 
