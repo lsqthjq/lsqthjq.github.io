@@ -260,7 +260,7 @@ class App implements IProgress {
 
 - 意外的更新
   - 因为目标对象并不知道观察者的存在，其的一个变化可能导致观察者的一系列更新。如果维护不当或定义错误，常常会引起错误的更新且难以捕捉
-  - vue的EventBus
+  - vue的EventBus会找不到在哪里使用了。
 
 [TOP](#title-home) 跳转标题
 

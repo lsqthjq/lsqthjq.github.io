@@ -5,91 +5,92 @@
  * 缓存文件流
  * 加密缓存文件流
  */
+namespace Decorator_demo1 {
+  export class Stream {
+    read() {
+      // do something;
+    }
+    seek() {
+      // do something;
+    }
+    write() {
+      // do something;
+    }
+  }
+  export class FileStream extends Stream {
+    read() {
+      // do something;
+    }
+    seek() {
+      // do something;
+    }
+    write() {
+      // do something;
+    }
+  }
 
-class Stream {
-  read() {
-    // do something;
+  export class CryptFileStream extends FileStream {
+    read() {
+      // do crypt;
+      // 调用父类操作，静态机制
+      super.read();
+    }
+    seek() {
+      // do crypt;
+      // 调用父类操作，静态机制
+      super.seek();
+    }
+    write() {
+      // do crypt;
+      // 调用父类操作，静态机制
+      super.write();
+    }
   }
-  seek() {
-    // do something;
+
+  export class BufferdFileStream extends FileStream {
+    read() {
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.read();
+    }
+    seek() {
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.seek();
+    }
+    write() {
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.write();
+    }
   }
-  write() {
-    // do something;
+
+  export class BufferdCryptFileStream extends FileStream {
+    read() {
+      // do crypt;
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.read();
+    }
+    seek() {
+      // do crypt;
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.seek();
+    }
+    write() {
+      // do crypt;
+      // do buffer;
+      // 调用父类操作，静态机制
+      super.write();
+    }
   }
 }
-class FileStream extends Stream {
-  read() {
-    // do something;
-  }
-  seek() {
-    // do something;
-  }
-  write() {
-    // do something;
-  }
-}
 
-class CryptFileStream extends FileStream {
-  read() {
-    // do crypt;
-    // 调用父类操作，静态机制
-    super.read();
-  }
-  seek() {
-    // do crypt;
-    // 调用父类操作，静态机制
-    super.seek();
-  }
-  write() {
-    // do crypt;
-    // 调用父类操作，静态机制
-    super.write();
-  }
-}
-
-class BufferdFileStream extends FileStream {
-  read() {
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.read();
-  }
-  seek() {
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.seek();
-  }
-  write() {
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.write();
-  }
-}
-
-class BufferdCryptFileStream extends FileStream {
-  read() {
-    // do crypt;
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.read();
-  }
-  seek() {
-    // do crypt;
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.seek();
-  }
-  write() {
-    // do crypt;
-    // do buffer;
-    // 调用父类操作，静态机制
-    super.write();
-  }
-}
-
-const s1 = new FileStream();
-const s2 = new CryptFileStream();
-const s3 = new BufferdFileStream();
-const s4 = new BufferdCryptFileStream();
+const d1s1 = new Decorator_demo1.FileStream();
+const d1s2 = new Decorator_demo1.CryptFileStream();
+const d1s3 = new Decorator_demo1.BufferdFileStream();
+const d1s4 = new Decorator_demo1.BufferdCryptFileStream();
 
 /**
  * 代码大量重复

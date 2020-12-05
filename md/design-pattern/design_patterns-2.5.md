@@ -89,6 +89,7 @@
 - 单一职责
   - Decorator
   - bridge
+  - 在软件组件的设计中，如果责任划分的不清晰，使用继承得到的结果往往是随着需求的变化，子类急剧膨胀，同时充斥着大量重复代码（bad smell），这时候的关键是划清责任。
 - 对象创建
   - Factory method
   - Abstract factory
