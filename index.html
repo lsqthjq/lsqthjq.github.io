@@ -1,30 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>金木又的博客</title>
-  </head>
-  <body>
-    <a href="https://github.com/lsqthjq/lsqthjq.github.io">lsqthjq.github.io</a>
-    <ul>
-      <li><a href="/page/design.html">没什么用的设计</a></li>
-      <li><a href="/page/study-tree.html">学习大纲</a></li>
-      <li><a href="/page/markdown-basic.html">MarkDown基本语法</a></li>
-      <li><a href="/page/markdown-expanded.html">MarkDown拓展语法</a></li>
-      <li><a href="/page/eslint.html">Eslint配置</a></li>
-      <li>
-        设计模式
-        <ul>
-          <li><a href="/page/degisn_patterns-1.html">什么是设计模式</a></li>
-          <li><a href="/page/degisn_patterns-2.html">设计模式基本原则</a></li>
-          <li><a href="/page/degisn_patterns-2.5.html">设计模式分类</a></li>
-          <li><a href="/page/degisn_patterns-3.html">Template Method 模板方法</a></li>
-          <li><a href="/page/degisn_patterns-4.html">策略模式 Strategy</a></li>
-          <li><a href="/page/degisn_patterns-5.html">观察者模式 Observer</a></li>
-          <li><a href="/page/degisn_patterns-6.html">装饰器模式 Decorator</a></li>
-        </ul>
-      </li>
-    </ul>
-  </body>
-</html>
+---
+layout: default
+cover: false
+---
+
+<header>
+  <h1>{{ site.name }}</h1>
+</header>
+
+<hr class="stylish"/>
+
+<main class="home-main">
+  {% for collection in site.collections %}
+    {% if collection.docs.size > 0 %}
+    <section id="posts">
+      <details {% if collection.default_open %}open{% endif %}>
+        <summary>
+          <h3 class="home-page-heading">{{ collection.title }}</h3>
+        </summary>
+        <div class="parent">
+          {% for post in collection.docs %}
+          <div class="post-wrapper">
+            <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%Y" }}</time>
+            <a class="post-link" href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </details>
+    </section>
+    {% endif %}
+  {% endfor %}
+</main>

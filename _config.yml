@@ -1,0 +1,36 @@
+title: 金木又的博客
+name: "金木又的博客"
+description: "金木又的博客"
+
+markdown: kramdown
+highlighter: rouge
+javascript_enabled: true
+
+collections:
+  posts:
+    title: 文章
+    default_open: true
+    output: true
+  design-pattern:
+    title: 设计模式
+    default_open: true
+    output: true
+
+defaults:
+  - scope:
+      path: "assets/image"
+    values:
+      image: true
+  - scope:
+      type: posts
+    values:
+      title: 文章
+      permalink: /post/:title
+  - scope:
+      type: design-pattern
+    values:
+      title: 设计模式
+      permalink: /design-pattern/:title
+
+plugins:
+  - jekyll-sitemap
