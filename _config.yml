@@ -15,6 +15,10 @@ collections:
     title: 设计模式
     default_open: true
     output: true
+  web:
+    title: Web
+    default_open: true
+    output: true
 
 defaults:
   - scope:
@@ -31,6 +35,11 @@ defaults:
     values:
       title: 设计模式
       permalink: /design-pattern/:title
+  - scope:
+      type: web
+    values:
+      title: Web
+      permalink: /web/:title
 
 plugins:
   - jekyll-sitemap

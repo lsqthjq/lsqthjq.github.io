@@ -12,46 +12,31 @@ tags:
 - 前端工具
   - [x] VS Code 的使用
   - [x] Git 使用
-  - [ ] ~~Mac 安装和 iTerm2 配置~~
-  - [ ] ~~Sublime Text 的使用~~
-  - [ ] ~~WebStorm 的使用~~
-  - [ ] ~~Atom 的使用~~
   - [x] GitHub 的使用
   - [ ] VS Code 的使用累积
   - [x] Chrome 浏览器
-  - [ ] Emmet in VS Code
-  - [ ] ~~iTerm2 + OhMyZsh + agnoster 搭建~~
-  - [ ] ~~iconMoon~~
   - [ ] whistle 网络抓包
 - HTML
-  - [ ] 认识 Web 和 Web 标准
-  - [ ] 浏览器的介绍
-  - [ ] 初识 HTML
-  - [ ] HTML 标签：排版标签
-  - [ ] HMTL 标签：字体标签和超链接
-  - [ ] HTML 标签：图片标签
-  - [ ] HTML 标签：图文详解
-  - [ ] HTML5 详解
-  - [ ] HTML5 举例：简单的视频播放器
-  - [ ] HTML 详解（二）
-  - [ ] HTML 详解（三）
-  - [ ] HTML 基础回顾
+  - [x] Web 和 Web 标准
+  - [x] HTML
+  - [ ] Video
+  - [ ] Canvas
+  - [ ] HTTP
 - CSS 基础
   - [ ] CSS 属性：字体属性和文本属性
   - [ ] CSS 属性：背景属性
-  - [ ] CSS 样式表和选择器
+  - [x] CSS 样式表和选择器
   - [ ] CSS 选择器：伪类
   - [ ] CSS 样式表的继承性和层叠性
-  - [ ] CSS 盒模型详解
+  - [ ] CSS 盒模型
   - [ ] 浮动
   - [ ] CSS 属性：定位属性
-  - [ ] CSS 案例讲解：博雅互动
-  - [ ] CSS3 选择器详解
-  - [ ] CSS3 属性详解（一）
-  - [ ] CSS3 属性详解：动画详解
-  - [ ] CSS3 属性：Flex 布局图文详解
-  - [ ] CSS3 属性：Web 字体
-  - [ ] SaaS 入门
+  - [x] CSS3 选择器
+  - [ ] CSS3 属性
+  - [ ] CSS3 动画
+  - [x] CSS3 Flex 布局
+  - [ ] CSS3 Web 字体
+  - [ ] SaaS 
   - [ ] 浏览器的兼容性问题
   - [ ] CSS3 的常见边框汇总
 - CSS 进阶

@@ -1,0 +1,18 @@
+<footer class="blur">
+  <hr class="stylish" />
+  {% include nav.html %}
+  <div>
+    Theme: <a href="https://github.com/abhn/Elementary">Elementary</a>
+    <br />
+    <a>{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}
+  </div>
+</footer>
+{% if site.javascript_enabled %}
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<!-- <script src="/assets/js/prism.js"></script> -->
+{% if page.layout == 'post' %}
+<script>
+  // $("pre").addClass("line-numbers").css("white-space", "pre-wrap");
+</script>
+{% endif %} {% endif %}

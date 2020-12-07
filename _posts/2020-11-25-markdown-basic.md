@@ -249,7 +249,7 @@ tags:
 
       ![Alt text](link)
 
-  ![shuaiqi](../image/4b869db11ec66d6fe7cf946f5aad912e.gif)
+  ![shuaiqi](/assets/image/4b869db11ec66d6fe7cf946f5aad912e.gif)
 
   参考式
 
@@ -259,11 +259,11 @@ tags:
 
   ![Alt text][img_ref]
 
-  [img_ref]: ../image/4b869db11ec66d6fe7cf946f5aad912e.gif
+  [img_ref]: /assets/image/4b869db11ec66d6fe7cf946f5aad912e.gif
 
   > 无法指定宽高，可以使用img
 
-  <img src="../image/4b869db11ec66d6fe7cf946f5aad912e.gif" style="width:45px">
+  <img src="/assets/image/4b869db11ec66d6fe7cf946f5aad912e.gif" style="width:45px">
 
 ## 其它
 

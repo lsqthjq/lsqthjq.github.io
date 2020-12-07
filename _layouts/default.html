@@ -2,24 +2,11 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <!-- <div class="wrapper"> -->
     <div class="container blur">
       {% include nav.html %} {% include music.html %}
       <hr class="stylish" />
       {{ content }}
     </div>
-    <footer class="blur">
-      <hr class="stylish" />
-      {% include nav.html %}
-      <div>
-        Theme: <a href="https://github.com/abhn/Elementary">Elementary</a>
-        <br />
-        <a>{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}
-      </div>
-    </footer>
-    <!-- </div> -->
-    {% if site.javascript_enabled %}
-    <script src="/assets/main.js"></script>
-    {% endif %}
+    {% include footer.html %}
   </body>
 </html>
