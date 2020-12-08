@@ -8,11 +8,6 @@ tags:
   
 #  桥接模式 Bridge
   
-  
-  
-  
-  
-  
 - [桥接模式 Bridge](#桥接模式-bridge)
   - [案例](#案例)
   - [优化](#优化)
@@ -22,9 +17,6 @@ tags:
     - [结构](#结构)
     - [适用性](#适用性)
     - [效果](#效果)
-  
-  
-  
   
 ##  案例
   
@@ -297,8 +289,10 @@ namespace Bridge_demo2 {
 ```ts
 // Messager
 // 有两个变化的维度。
+// 平台实现
+// 业务抽象
 namespace Bridge_demo3 {
-  // 业务实现抽象为一个类
+  // 业务抽象，内部绑定一个平台实现
   export abstract class Messager {
     messagerImp!: MessagerIMP;
   
@@ -428,7 +422,6 @@ namespace Bridge_demo3 {
 - 红色 变化
   
 ###  适用性
-  
   
 - 不希望抽象与实现之间有固定的绑定关系。希望再运行时可以选择和切换
 - 类的抽象以及它的实现都可以通过生成子类的方式进行扩充。对不同的抽象和实现之间进行组合

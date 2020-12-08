@@ -12,7 +12,7 @@ tags:
 
 <!-- code_chunk_output -->
 
-- [设计模式分类](#title-home)
+- [设计模式分类 {#title-home}](#设计模式分类-title-home)
   - [设计模式空间](#设计模式空间)
   - [模式关系图形说明](#模式关系图形说明)
   - [从封装角度进行分类](#从封装角度进行分类)
@@ -112,6 +112,7 @@ tags:
   - Abstract factory
   - Prototype
   - builder
+  - 通过“对象创建”模式绕开new，来避免对象创建（new）过程中所导致的紧耦合（依赖具体类），从而支持对象创建的稳定。它是接口抽象之后的第一步工作。
 - 对象性能
   - Singleton
   - flyweight
