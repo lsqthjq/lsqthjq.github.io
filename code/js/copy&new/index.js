@@ -17,7 +17,7 @@
 function clone(obj) {
   const attrs = Object.getOwnPropertyDescriptors(obj);
   const newObj = Object.create(Object.getPrototypeOf(obj));
-  for (key in attrs) {
+  for (let key in attrs) {
     Object.defineProperty(newObj, key, attrs[key]);
   }
   return newObj;
@@ -78,7 +78,7 @@ Object.defineProperty(obj, "bat", {
   configurable: true, // 可否被配置
   enumerable: true, // 可否被遍历
   set: function (val) {
-    console.log("set");
+    console.log("set",val);
   },
   get: function () {
     console.log("get");
@@ -126,17 +126,17 @@ function showThis() {
   };
 }
 
-function newObj(cla, ...args) {
-  let obj = Object.create(cla.prototype);
-  obj = Object.assign(obj, cla);
-  const res = cla.apply(obj, args);
-  const isObject = typeof res === "object" && res !== null;
-  const isFunction = typeof res === "function";
+// function newObj(cla, ...args) {
+//   let obj = Object.create(cla.prototype);
+//   obj = Object.assign(obj, cla);
+//   const res = cla.apply(obj, args);
+//   const isObject = typeof res === "object" && res !== null;
+//   const isFunction = typeof res === "function";
 
-  return isObject || isFunction ? res : obj;
-}
+//   return isObject || isFunction ? res : obj;
+// }
 
-function _new(Fn, ...args) {
+function newObj(Fn, ...args) {
   // 判断是否是构造函数
   function is_constructor(f) {
     if (f === Symbol) return false;

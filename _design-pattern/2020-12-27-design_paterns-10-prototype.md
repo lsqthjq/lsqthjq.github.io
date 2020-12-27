@@ -103,7 +103,7 @@ app.button_click();
 ##  结构
   
   
-![img](../assets/image/design-pattern/10-1.png )
+![img](/assets/image/design-pattern/10-1.png )
   
 ##  总结
   
