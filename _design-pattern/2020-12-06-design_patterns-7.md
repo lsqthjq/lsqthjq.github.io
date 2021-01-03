@@ -19,10 +19,9 @@ tags:
     - [效果](#效果)
   
 ##  案例
-  
-  
-实现一系列流， 文件流、加密文件流、缓存文件流、加密缓存文件流等等。
-  
+
+多平台的聊天室。
+
 代码如下：
   
 ```ts
@@ -193,6 +192,7 @@ namespace Bridge_demo2 {
   }
   
   // 不同平台，这两个方法有不同的实现
+  // 此时还有 部分方法未被实现
   export abstract class PcMessagerBase extends Messager {
     playSound() {
       // do something
@@ -233,7 +233,7 @@ namespace Bridge_demo2 {
   
   // 业务不同
   export class MessagerLite {
-    messager!: Messager; // 运行时动态绑定 PcMesssagerBase， 但此时其并未完全实现
+    messager!: Messager; // 运行时动态绑定 PcMesssagerBase， 但此时其并未完全实现。
   
     constructor(messager: Messager) {
       this.messager = messager;
@@ -306,7 +306,7 @@ namespace Bridge_demo3 {
   }
   
   // 将平台实现抽象出来
-  export abstract class MessagerIMP {
+  export abstract class MessagerIMP  {
     abstract playSound(): void;
     abstract connect(): void;
     abstract readText(): void;
@@ -314,7 +314,7 @@ namespace Bridge_demo3 {
   }
   
   // 不同平台，这两个方法有不同的实现
-  export abstract class PcMessagerBase extends MessagerIMP {
+  export class PcMessagerBase extends MessagerIMP {
     playSound() {
       // do something
       return;
@@ -333,7 +333,7 @@ namespace Bridge_demo3 {
     }
   }
   
-  export abstract class MobileMessagerBase extends MessagerIMP {
+  export class MobileMessagerBase extends MessagerIMP {
     playSound() {
       // do something
       return;
@@ -352,9 +352,9 @@ namespace Bridge_demo3 {
     }
   }
   
-  // 业务不同
+  // 业务不同，实现业务逻辑
   export class MessagerLite extends Messager {
-    constructor(messagerImp: MessagerIMP) {
+    constructor(messagerImp: MessagerIMP) {    // 动态绑定，此时PcMessagerBase已实现。
       super(messagerImp);
     }
   
@@ -411,6 +411,7 @@ namespace Bridge_demo3 {
   
 - 将抽象部分（业务功能）与它的实现部分（平台实现）分离，使他们都可以独立的变化
 - 由于某些类型的固有的实现逻辑，使得它们具有两个变化的维度，乃至多个维度的变化
+- 各个变化部分又需要一起合作完成功能，单独一方面并无意义。（和装饰器模式的区别，装饰器可以延各个方向变化。）
 - 如何应对这种多维度的变化？如何利用面向对象技术来使得类型可以轻松的沿着两个乃至多个方向变化，而不引入额外的负责度？
   
 ###  结构

@@ -123,6 +123,11 @@ class SalesOrder {
     return this.taxStrategy.calculate();
   }
 }
+
+const cal = new SalesOrder(new FR_Tax());
+cal.calculate();
+
+// 此处并非消除了原来的switch，只是将判断延迟到了具体执行的时候，在运行过程中判断。
 ~~~
 
 代码中，使用*模板方法*定义算法结构，使用*工厂模式*动态绑定税法对象。

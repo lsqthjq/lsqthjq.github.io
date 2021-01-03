@@ -96,22 +96,18 @@ step5
 // 定义run方法
 // 定义确定的步骤
 // 不确定的步骤仅定义虚函数
-class Library {
+abstract class Library {
   step1() {
     console.log("step1");
   }
 
-  step2() {
-    return;
-  }
-
+  abstract step2();
+  
   step3() {
     console.log("step3");
   }
 
-  step4() {
-    return;
-  }
+  abstract step4();
 
   step5() {
     console.log("step5");
