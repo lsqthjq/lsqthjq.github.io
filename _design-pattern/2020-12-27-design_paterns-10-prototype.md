@@ -6,9 +6,9 @@ tags:
 ---  
   
   
-#  工厂模式 Factory
+#  原型模式 Prototype
   
-- [工厂模式 Factory](#工厂模式-factory )
+- [原型模式 Prototype](#原型模式 Prototype )
   - [示例](#示例 )
   - [动机&意图](#动机意图 )
   - [类别](#类别 )
