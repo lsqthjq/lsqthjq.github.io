@@ -126,6 +126,10 @@ function showThis() {
   };
 }
 
+class ShowThat {
+  name = 'that'
+}
+
 // function newObj(cla, ...args) {
 //   let obj = Object.create(cla.prototype);
 //   obj = Object.assign(obj, cla);
@@ -175,3 +179,7 @@ function newObj(Fn, ...args) {
 // function this，调用的对象。
 const oo = newObj(showThis);
 console.log("oo", oo);
+
+
+const ot = newObj(ShowThat);
+console.log("ot", ot);
